@@ -87,3 +87,18 @@ def convertToBinary(denary):
         
 print(convertToBinary(x))
 ```
+Now, let's try to make a code to convert binary to decimal
+The binaryToDenary function takes a binary number as a string and returns its denary (base-10) representation as an integer. It initializes a denary variable to 0, and then iterates over each character in the binary string. For each bit, it multiplies the current value of denary by 2, and adds the integer value of the bit (0 or 1). Finally, it returns the resulting denary integer.
+```python
+
+def convertToDenary(binary):
+    denary = 0
+    for bit in binary:
+        denary = denary * 2 + int(bit)
+    return denary
+
+
+binary = int(input())
+denary = convertToDenary(binary)
+print(denary) 
+```
