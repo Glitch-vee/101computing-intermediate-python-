@@ -1,6 +1,7 @@
 
 In this challenge, we are going to write an algorithm to convert a decimal (aka Denary) number between 0 and 255 into binary using 1 Byte (=8 bits).
 
+Now, let's write the program using the basics.
 ```python
 denary= int(input("Enter a number between 0 and 255:   "))
 
