@@ -60,21 +60,30 @@ else:
     print("Invalid number")
 ```
 
-Above we have done the coding in elementary way. We can use function to make it more simple.
+Above we have done the coding in elementary way. We can use function to make it more simple and also a code to validate the input so that your code only accepts a number between 0 and 255
 Let's make a function called, convertToBinary(). This function will take a denary number as a parameter and return a binary string. ​
 
 
 
 
 ```python
+x= int(input( "Enter a number between 0 to 255:   "))
+
 def convertToBinary(denary):
     binary = ""
     bits = [128, 64, 32, 16, 8, 4, 2, 1]
-    for bit in bits:
-        if denary >= bit:
-            binary += "1"
-            denary -= bit
-        else:
-            binary += "0"
-    return binary
+    
+    if denary>=0 and denary<=255:
+        for bit in bits:
+            if denary >= bit:
+                binary += "1"
+                denary -= bit
+            else:
+                binary += "0"
+        return binary
+
+    else:
+        print("Invalid number")
+        
+print(convertToBinary(x))
 ```
