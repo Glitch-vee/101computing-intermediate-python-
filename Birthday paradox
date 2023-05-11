@@ -1,0 +1,58 @@
+For this Python challenge we will create a statistical simulation program to test the Birthday Paradox. Our aim is to determine whether the actual probabilities match the predicted probabilities by showing that, with a group of 23 students or more, the probability of having at least two students sharing the same birthday will be at least 50%.
+Our program will:
+
+1.Generate a class list of students (e.g. 23 students or more)
+2.Use a randomDate() function to generate random birthdays for each of our students
+3.Store the lists of birthdays in a list
+4. Output the list of students with their randomly generated birthdays
+
+lets code the first step:
+```python
+import random
+
+
+# Import the random and string modules
+import random
+import string
+
+# Define a function to generate a random name of a given length
+def generate_name(length):
+  # Initialize an empty string to store the name
+  name = ""
+
+  # Loop for length times
+  for i in range(length):
+    # Randomly choose a letter from the alphabet
+    letter = random.choice(string.ascii_letters)
+
+    # Append the letter to the name
+    name += letter
+
+  # Return the name
+  return name
+
+# Ask the user for the number of students to generate
+num_students = int(input("How many students do you want to generate?"))
+
+# Initialize an empty list to store the students
+students = []
+
+# Loop for num_students times
+for i in range(num_students):
+  # Randomly choose a length between 3 and 10 for the first name and the last name
+  first_name_length = random.randint(3, 10)
+  last_name_length = random.randint(3, 10)
+
+  # Generate a random first name and a random last name using the function
+  first_name = generate_name(first_name_length)
+  last_name = generate_name(last_name_length)
+
+  # Concatenate the first name and the last name with a space
+  full_name = first_name + " " + last_name
+
+  # Append the full name to the students list
+  students.append(full_name)
+
+# Print the students list
+print(students)
+```
